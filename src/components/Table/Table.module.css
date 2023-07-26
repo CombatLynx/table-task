@@ -1,0 +1,57 @@
+.table-block {
+    position: relative;
+}
+
+.pagination-block {
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+thead th:first-child,
+.column:first-child {
+    display: none;
+}
+
+.button-prev {
+    position: absolute;
+    left: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.button-next {
+    position: absolute;
+    right: 0;
+    border: 0;
+    background: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.search {
+    background: #474955;
+    display: flex;
+}
+
+.search input {
+    min-width: 300px;
+    background: #474955;
+    border: 0;
+    padding: 10px;
+    outline: none;
+    color: white;
+}
+
+.search-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 15px;
+}
