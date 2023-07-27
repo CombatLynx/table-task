@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Table from "./components/Table/Table";
 import styled from "styled-components";
 import axios from "axios";
-import {Route, Routes} from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 export const instance = axios.create({
     withCredentials: true,
@@ -42,10 +42,16 @@ function App() {
         'Описание'
     ]
 
+    useEffect(() => {
+        alert('Кликните на ID, чтобы начать работу с таблицей :)')
+    }, [])
+
     return (
         <Container>
             <Routes>
-                <Route path="*" element={<Table header={header} data={data}/>}/>
+                <Route path="/table-task" element={<Table header={header} data={data}/>}/>
+                <Route path="*" element={<div>404 NOT FOUND</div>}/>
+                <Route path="/" element={<Navigate to='/table-task'/>}/>
             </Routes>
         </Container>
     );
